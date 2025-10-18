@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Ana_menu_Event_system : MonoBehaviour
 {
        //31315431
+       //erkenkalktım
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
