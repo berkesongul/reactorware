@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Ana_menu_Event_system : MonoBehaviour
 {
-       //31
+       //3131
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
