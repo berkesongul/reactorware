@@ -4,6 +4,7 @@ using System.Collections;
 
 public class Game_ : MonoBehaviour
 {
+
     [Header("UI Referansı")]
     // Unity Editor'dan atanacak Legacy Text bileşeni
     public Text stabilityText;
@@ -16,6 +17,11 @@ public class Game_ : MonoBehaviour
     public float dususAraligi = 2.0f;
 
     private int mevcutStabilite;
+
+
+    public GameObject simon_says_panel;
+    public GameObject simon_says_button;
+
 
     void Start()
     {
@@ -66,5 +72,15 @@ public class Game_ : MonoBehaviour
         }
     }
 
+    public void Simon_PaneliAcKapat()
+    {
 
+        simon_says_panel.SetActive(!simon_says_panel.activeSelf);
+    }
+    
+
+    public void Simon_Buton_AcKapa()
+    {
+        simon_says_button.SetActive(!simon_says_button.activeSelf);
+    }
 }
