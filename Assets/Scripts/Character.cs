@@ -6,12 +6,13 @@ public class Character : MonoBehaviour
     public float hareketHizi = 5.0f;
 
     private Rigidbody2D rb;
+    private Animator animator; // Animator referansı
 
     void Start()
     {
-        // Karakter üzerindeki Rigidbody2D bileşenini al. 
-        // Hareket için Rigidbody kullanmak en iyisidir.
         rb = GetComponent<Rigidbody2D>();
+        // Animator bileşenini al
+        animator = GetComponent<Animator>();
 
         // Yerçekimini devre dışı bırakın, aksi takdirde karakter aşağı düşer.
         if (rb != null)
@@ -45,27 +46,36 @@ public class Character : MonoBehaviour
         );
 
         // 3. Hesaplanan yöne göre açıyı bul.
-        // Mathf.Atan2 radyan cinsinden değer döndürür, Dereceye çeviriyoruz.
         float aci = Mathf.Atan2(bakmaYonu.y, bakmaYonu.x) * Mathf.Rad2Deg;
 
         // 4. Karakterin rotasyonunu bu açıya ayarla.
-        // Z ekseni etrafında döndürüyoruz, 2D için bu geçerlidir.
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, aci));
     }
 
     // --- WASD ile Hareket Etme Fonksiyonu ---
     void WASDIleHareket()
     {
-        // 1. WASD girişlerini al. (Unity'nin varsayılan "Horizontal" ve "Vertical" ayarları WASD ve Ok tuşlarını içerir)
-        float yatayGiris = Input.GetAxisRaw("Horizontal"); // A veya D
-        float dikeyGiris = Input.GetAxisRaw("Vertical");   // W veya S
+        // 1. WASD girişlerini al.
+        float yatayGiris = Input.GetAxisRaw("Horizontal");
+        float dikeyGiris = Input.GetAxisRaw("Vertical");
 
         // 2. Yön vektörünü oluştur.
         Vector2 hareketYonu = new Vector2(yatayGiris, dikeyGiris).normalized;
 
-        // 3. Rigidbody'nin hızını ayarla.
-        // .normalized() çapraz hareketlerde daha hızlı gitmeyi engeller.
-        // Time.fixedDeltaTime, fizik güncellemeleri arasındaki sabit zaman dilimidir.
+        // Rigidbody'nin hızını ayarla.
         rb.linearVelocity = hareketYonu * hareketHizi;
+
+        // <<< YENİ: ANİMATÖRÜ BOOL PARAMETRESİ İLE GÜNCELLEME >>>
+        if (animator != null)
+        {
+            // Hareket Vektörünün Büyüklüğünü (Magnitude) hesapla.
+            // 0'dan büyükse karakter hareket ediyor demektir.
+            bool hareketEdiyor = hareketYonu.magnitude > 0.1f;
+
+            // Animator'daki "kosuyor_mu" bool parametresini ayarla.
+            // true (1) ise Walking, false (0) ise Idle oynayacak.
+            animator.SetBool("kosuyor_mu", hareketEdiyor);
+        }
+        // <<< YENİ KOD SONU >>>
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI; // Legacy Text bileşenini kullanmak için bu kütüphane ZORUNLUDUR!
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Game_ : MonoBehaviour
@@ -107,6 +108,7 @@ public class Game_ : MonoBehaviour
         game5_Buton_AcKapa();
     }
 
+
     public void Simon_PaneliAcKapat()
     {
 
@@ -157,6 +159,11 @@ public class Game_ : MonoBehaviour
     public void game5_Panel_AcKapa()
     {
         game5_panel.SetActive(!game5_panel.activeSelf);
+    }
+
+    public void stabilite_arttir()
+    {
+        mevcutStabilite = mevcutStabilite + 25;
     }
 
     void Start()
@@ -219,6 +226,7 @@ public class Game_ : MonoBehaviour
                     mevcutStabilite = 0; // Negatife düşmesini engelle
                     // OYUN BİTTİ veya DİĞER AKSİYONLAR buraya eklenebilir.
                     Debug.Log("Stabilite sıfıra ulaştı! Oyun bitti (veya karakter öldü).");
+                    SceneManager.LoadScene(3);
                     break; // Döngüyü sonlandır
                 }
             }
