@@ -1,14 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: cf75a40a9ab7e8448bea91c7da634d14
-=======
-guid: b10afaf5612ac6b47a0196c62a25bcbc
->>>>>>> Stashed changes
+guid: 42bc16e5c6272f54c9a8a9ace7ba2a86
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2441153534569035596
-    second: Console_0
+      213: -2103716009273779811
+    second: Console 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -41,11 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< Updated upstream
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> Stashed changes
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -83,11 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< Updated upstream
     textureCompression: 0
-=======
-    textureCompression: 1
->>>>>>> Stashed changes
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Console_0
+      name: Console 1_0
       rect:
         serializedVersion: 2
         x: 352
@@ -127,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c473d26b438b0e120800000000000000
-      internalID: 2441153534569035596
+      spriteID: d991fee7f691ec2e0800000000000000
+      internalID: -2103716009273779811
       vertices: []
       indices: 
       edges: []
@@ -147,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Console_0: 2441153534569035596
+      Console 1_0: -2103716009273779811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
