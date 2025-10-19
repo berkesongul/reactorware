@@ -5,8 +5,9 @@ using System.Collections;
 public class Game_ : MonoBehaviour
 {
 
+
     [Header("UI Referansı")]
-    // Unity Editor'dan atanacak Legacy Text bileşeni
+    // Unity Editor Legacy Text bileşeni
     public Text stabilityText;
 
     [Header("Ayarlar")]
