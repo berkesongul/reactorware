@@ -19,13 +19,33 @@ public class Game_ : MonoBehaviour
 
     private int mevcutStabilite;
 
-
+    //tüm butonların gameobject çağırımları
     public GameObject simon_says_panel;
     public GameObject simon_says_button;
+    public gameobject game2_button;
+    public gameobject game3_button;
+    public gameobject game4_button;
+    public gameobject game5_button
 
+    public GameObject game2_panel
+    public GameObject game3_panel;
+    public GameObject game4_panel;
+    public GameObject game5_panel;
 
+    public int time;
+    public bool zaman_ilerlesin_mi = false;
+    public bool Simon_bitti_mi = false;
+
+    public void simon_says_baslat()
+    {
+        Simon_Buton_AcKapa();
+        Simon_PaneliAcKapat();
+
+    }
     void Start()
     {
+        zaman_ilerlesin_mi = true;
+
         // 1. Mevcut stabiliteyi başlangıç değerine ayarla
         mevcutStabilite = baslangicStabilite;
 
@@ -47,28 +67,43 @@ public class Game_ : MonoBehaviour
         }
     }
 
+
+    IEnumerator Zaman_sayaci()
+    {
+
+        if (zaman_ilerlesin_mi == true)
+        {
+            yield return new WaitForSeconds(1);
+            time = time + 1;
+
+        }
+    }
+
     // Coroutine (Eşzamanlı çalışan fonksiyon) kullanarak stabiliteyi düşür
     IEnumerator StabiliteyiDusurCoroutine()
     {
-        // Sonsuz döngü: Stabilite 0'ın üstünde olduğu sürece düşmeye devam et
-        while (mevcutStabilite > 0)
+        if (zaman_ilerlesin_mi == true)
         {
-            // Belirtilen saniye kadar bekle
-            yield return new WaitForSeconds(dususAraligi);
-
-            // 1 birim düşür
-            mevcutStabilite--;
-
-            // UI'ı güncelle
-            GuncelStabiliteUI();
-
-            // Eğer stabilite sıfır olduysa
-            if (mevcutStabilite <= 0)
+            // Sonsuz döngü: Stabilite 0'ın üstünde olduğu sürece düşmeye devam et
+            while (mevcutStabilite > 0)
             {
-                mevcutStabilite = 0; // Negatife düşmesini engelle
-                // OYUN BİTTİ veya DİĞER AKSİYONLAR buraya eklenebilir.
-                Debug.Log("Stabilite sıfıra ulaştı! Oyun bitti (veya karakter öldü).");
-                break; // Döngüyü sonlandır
+                // Belirtilen saniye kadar bekle
+                yield return new WaitForSeconds(dususAraligi);
+
+                // 1 birim düşür
+                mevcutStabilite--;
+
+                // UI'ı güncelle
+                GuncelStabiliteUI();
+
+                // Eğer stabilite sıfır olduysa
+                if (mevcutStabilite <= 0)
+                {
+                    mevcutStabilite = 0; // Negatife düşmesini engelle
+                    // OYUN BİTTİ veya DİĞER AKSİYONLAR buraya eklenebilir.
+                    Debug.Log("Stabilite sıfıra ulaştı! Oyun bitti (veya karakter öldü).");
+                    break; // Döngüyü sonlandır
+                }
             }
         }
     }
@@ -83,5 +118,45 @@ public class Game_ : MonoBehaviour
     public void Simon_Buton_AcKapa()
     {
         simon_says_button.SetActive(!simon_says_button.activeSelf);
+    }
+
+    public void game2_Buton_AcKapa()
+    {
+        game2_button.SetActive(!game3_button.activeSelf);
+    }
+
+    public void game3_Buton_AcKapa()
+    {
+        game3_button.SetActive(!game3_button.activeSelf);
+    }
+
+    public void game4_Buton_AcKapa()
+    {
+        game4_button.SetActive(!game4_button.activeSelf);
+    }
+
+    public void game5_Buton_AcKapa()
+    {
+        game4_button.SetActive(!game5_button.activeSelf);
+    }
+
+    public void game2_Panel_AcKapa()
+    {
+        game2_panel.SetActive(!game2_panel.activeSelf);
+    }
+
+    public void game3_Panel_AcKapa()
+    {
+        game3_panel.SetActive(!game3_panel.activeSelf);
+    }
+
+    public void game4_Panel_AcKapa()
+    {
+        game4_panel.SetActive(!game4_panel.activeSelf);
+    }
+
+    public void game5_Panel_AcKapa()
+    {
+        game5_panel.SetActive(!game5_panel.activeSelf);
     }
 }
