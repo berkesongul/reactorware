@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 116585911}
   - component: {fileID: 116585912}
   m_Layer: 5
-  m_Name: simon_says_button (3)
+  m_Name: game_4_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 320346591}
   - component: {fileID: 320346592}
   m_Layer: 5
-  m_Name: simon_says_button (4)
+  m_Name: game_5_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 459735848}
   - component: {fileID: 459735849}
   m_Layer: 5
-  m_Name: simon_says_button (1)
+  m_Name: game2_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3021,7 +3021,6 @@ RectTransform:
   - {fileID: 1999821059}
   - {fileID: 116585907}
   - {fileID: 320346587}
-  - {fileID: 1833971003}
   m_Father: {fileID: 1618471653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3544,6 +3543,17 @@ MonoBehaviour:
   dususAraligi: 2
   simon_says_panel: {fileID: 2088922962}
   simon_says_button: {fileID: 1367422677}
+  game2_button: {fileID: 459735843}
+  game3_button: {fileID: 1999821058}
+  game4_button: {fileID: 116585906}
+  game5_button: {fileID: 320346586}
+  game2_panel: {fileID: 0}
+  game3_panel: {fileID: 0}
+  game4_panel: {fileID: 0}
+  game5_panel: {fileID: 0}
+  time: 0
+  zaman_ilerlesin_mi: 0
+  Simon_bitti_mi: 0
 --- !u!1 &791821803
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,19 +5594,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 764224887}
         m_TargetAssemblyTypeName: Game_, Assembly-CSharp
-        m_MethodName: Simon_PaneliAcKapat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 764224887}
-        m_TargetAssemblyTypeName: Game_, Assembly-CSharp
-        m_MethodName: Simon_Buton_AcKapa
+        m_MethodName: simon_says_baslat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5757,19 +5755,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 764224887}
         m_TargetAssemblyTypeName: Game_, Assembly-CSharp
-        m_MethodName: Simon_Buton_AcKapa
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 764224887}
-        m_TargetAssemblyTypeName: Game_, Assembly-CSharp
-        m_MethodName: Simon_PaneliAcKapat
+        m_MethodName: simon_says_kapat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7199,180 +7185,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1833971002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1833971003}
-  - component: {fileID: 1833971006}
-  - component: {fileID: 1833971005}
-  - component: {fileID: 1833971004}
-  - component: {fileID: 1833971007}
-  - component: {fileID: 1833971008}
-  m_Layer: 5
-  m_Name: simon_says_button (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1833971003
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833971002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 708938872}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.97, y: 10.32}
-  m_SizeDelta: {x: 1.678, y: 1.7189}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1833971004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833971002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0.9622642, g: 0, b: 0.13749148, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1833971005}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 764224887}
-        m_TargetAssemblyTypeName: Game_, Assembly-CSharp
-        m_MethodName: Simon_PaneliAcKapat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 764224887}
-        m_TargetAssemblyTypeName: Game_, Assembly-CSharp
-        m_MethodName: Simon_Buton_AcKapa
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1833971005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833971002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1833971006
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833971002}
-  m_CullTransparentMesh: 1
---- !u!225 &1833971007
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833971002}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!114 &1833971008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833971002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e355909d3e7bb240bccffdac94e00ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetCanvasGroup: {fileID: 1833971007}
-  donguSuresi: 2
-  minAlpha: 0.3
-  maxAlpha: 1
 --- !u!1 &1929301824
 GameObject:
   m_ObjectHideFlags: 0
@@ -8051,7 +7863,7 @@ GameObject:
   - component: {fileID: 1999821063}
   - component: {fileID: 1999821064}
   m_Layer: 5
-  m_Name: simon_says_button (2)
+  m_Name: game3_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
